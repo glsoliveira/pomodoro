@@ -1,6 +1,5 @@
 // import styles from "./Button.module.css";
 import { ButtonContainer, ButtonVariante } from "./Button.styles";
-import { useState } from "react";
 
 interface ButtonProps {
   variante?: ButtonVariante;
