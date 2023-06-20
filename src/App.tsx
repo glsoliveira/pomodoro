@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { ThemeProvider } from "styled-components";
 
 import { Button } from "./components/Button";

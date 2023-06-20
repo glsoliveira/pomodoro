@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 // import styles from "./Button.module.css";
 import { ButtonContainer, ButtonVariante } from "./Button.styles";
 
