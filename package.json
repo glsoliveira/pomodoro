@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@rocketseat/eslint-config": "^1.2.0",
+    "phosphor-react": "^1.4.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-is": "^16.13.1",
