@@ -10,6 +10,19 @@ import {
 } from './styles'
 // import { useState } from "react";
 import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import * as zod from 'zod'
+const newCycleFormValidationSchema = zod.object({
+  task: zod.string().min(1, 'What is the task?'),
+  minutesAmount: zod.number().min(5).max(60, 'The value must be up to 60'),
+})
+
+// interface NewCycleFormData {
+//   task: string;
+//   minutesAmount: number;
+// }
+
+type NewCycleFormData = zod.infer<typeof newCycleFormValidationSchema>
 
 export function Home() {
   // Controlled
@@ -21,11 +34,20 @@ export function Home() {
   // }
   // onSubmit={handleSubmit} add on tag form
 
-  const { register, handleSubmit, watch } = useForm()
+  const { register, handleSubmit, watch, reset } = useForm<NewCycleFormData>({
+    resolver: zodResolver(newCycleFormValidationSchema),
+    defaultValues: {
+      task: '',
+      minutesAmount: 0,
+    },
+  })
 
-  function handleCreateNewCycle(data: any) {
+  function handleCreateNewCycle(data: NewCycleFormData) {
     console.log(data)
+    reset()
   }
+
+  // console.log(formState.errors);
 
   const task = watch('task')
   const isSubmitDisable = !task
