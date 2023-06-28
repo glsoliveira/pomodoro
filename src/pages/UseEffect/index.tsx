@@ -29,7 +29,7 @@ export function UseEffect() {
     <div>
       <ul>
         {list.map((item) => (
-          <li>{item}</li>
+          <li key={item}>{item}</li>
         ))}
       </ul>
       <input
@@ -39,7 +39,7 @@ export function UseEffect() {
       />
       <ul>
         {filteredList.map((item) => (
-          <li>{item}</li>
+          <li key={item}>{item}</li>
         ))}
       </ul>
       <button onClick={addToList}>Add to list</button>
