@@ -18,7 +18,7 @@ export function Home() {
     useContext(CyclesContext);
   const newCycleFormValidationSchema = zod.object({
     task: zod.string().min(1, "What is the task?"),
-    minutesAmount: zod.number().min(1).max(60, "The value must be up to 60"),
+    minutesAmount: zod.number().min(5).max(60, "The value must be up to 60"),
   });
 
   type NewCycleFormData = zod.infer<typeof newCycleFormValidationSchema>;
