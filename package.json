@@ -14,6 +14,7 @@
     "@hookform/resolvers": "^3.1.1",
     "@rocketseat/eslint-config": "^1.2.0",
     "date-fns": "^2.30.0",
+    "immer": "^10.0.2",
     "phosphor-react": "^1.4.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",

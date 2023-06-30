@@ -15,16 +15,14 @@ export enum ActionTypes{
     }
   }
 
-  export function interruptCycleAction(activeCycleId: Cycle){
+  export function interruptCycleAction(){
     return { 
         type: ActionTypes.INTERRUPT_CYCLE, 
-        payload: activeCycleId 
     }
   }
 
-  export function marcCurrentCycleAsFinishedAction(activeCycleId: Cycle){
+  export function marcCurrentCycleAsFinishedAction(){
     return {
         type: ActionTypes.MARK_CURRENT_CYCLE_AS_FINISHED,
-        payload: activeCycleId,
       }
   }

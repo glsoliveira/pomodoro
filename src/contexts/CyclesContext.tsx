@@ -43,7 +43,7 @@ export function CyclesContextProvider({
   const activeCycle = cycles.find((cycle) => cycle.id === activeCycleId);
 
   function markCurrentCycleAsFinished() {
-    dispatch(marcCurrentCycleAsFinishedAction(activeCycleId));
+    dispatch(marcCurrentCycleAsFinishedAction());
   }
   function setSecondsPassed(seconds: number) {
     setAmountSecondsPassed(seconds);
@@ -64,7 +64,7 @@ export function CyclesContextProvider({
   }
 
   function interruptCurrentCycle() {
-    dispatch(interruptCycleAction(activeCycleId));
+    dispatch(interruptCycleAction());
   }
   return (
     <CyclesContext.Provider
