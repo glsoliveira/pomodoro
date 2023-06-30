@@ -8,11 +8,11 @@ import { ContextAPI } from "./pages/ContextAPI/index.tsx";
 export function Router() {
   return (
     <Routes>
-      <Route path="/" element={<DefaultLayout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/history" element={<History />} />
-        <Route path="/useEffect" element={<UseEffect />} />
-        <Route path="/contextapi" element={<ContextAPI />} />
+      <Route path="/project-02" element={<DefaultLayout />}>
+        <Route path="/project-02" element={<Home />} />
+        <Route path="/project-02/history" element={<History />} />
+        <Route path="/project-02/useEffect" element={<UseEffect />} />
+        <Route path="/project-02/contextapi" element={<ContextAPI />} />
       </Route>
     </Routes>
   );
