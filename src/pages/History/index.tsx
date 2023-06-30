@@ -1,10 +1,10 @@
-import { useContext } from 'react'
-import { HistoryContainer, HistoryList, Status } from './styles.ts'
-import { CyclesContext } from '../../contexts/CyclesContext.tsx'
-import { formatDistanceToNow } from 'date-fns'
+import { useContext } from "react";
+import { HistoryContainer, HistoryList, Status } from "./styles.ts";
+import { CyclesContext } from "../../contexts/CyclesContext.tsx";
+import { formatDistanceToNow } from "date-fns";
 
 export function History() {
-  const { cycles } = useContext(CyclesContext)
+  const { cycles } = useContext(CyclesContext);
   return (
     <HistoryContainer>
       <h1>My history</h1>
@@ -12,10 +12,12 @@ export function History() {
       <HistoryList>
         <table>
           <thead>
-            <th>Task</th>
-            <th>Duration</th>
-            <th>Start</th>
-            <th>Status</th>
+            <tr>
+              <th>Task</th>
+              <th>Duration</th>
+              <th>Start</th>
+              <th>Status</th>
+            </tr>
           </thead>
           <tbody>
             {cycles.map((cycle) => {
@@ -24,7 +26,9 @@ export function History() {
                   <td>{cycle.task}</td>
                   <td>{cycle.minutesAmount} minutes</td>
                   <td>
-                    {formatDistanceToNow(cycle.startDate, { addSuffix: true })}{' '}
+                    {formatDistanceToNow(new Date(cycle.startDate), {
+                      addSuffix: true,
+                    })}{" "}
                   </td>
                   <td>
                     {cycle.finishedDate && (
@@ -38,11 +42,11 @@ export function History() {
                     )}
                   </td>
                 </tr>
-              )
+              );
             })}
           </tbody>
         </table>
       </HistoryList>
     </HistoryContainer>
-  )
+  );
 }
