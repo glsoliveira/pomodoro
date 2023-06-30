@@ -293,7 +293,7 @@ body, input, textarea, button{
       color: ${e=>e.theme["green-500"]};
     }
   }
-`,sw="/assets/logo-bcf2218a.svg";function lw(){return j.jsxs(aw,{children:[j.jsx("img",{src:sw,alt:""}),j.jsxs("nav",{children:[j.jsx(Af,{to:"/",title:"Timer",children:j.jsx(z0,{size:24})}),j.jsx(Af,{to:"/history",title:"History",children:j.jsx($0,{size:24})})]})]})}const uw=Xe.div`
+`,sw="/project-02/assets/logo-bcf2218a.svg";function lw(){return j.jsxs(aw,{children:[j.jsx("img",{src:sw,alt:""}),j.jsxs("nav",{children:[j.jsx(Af,{to:"/",title:"Timer",children:j.jsx(z0,{size:24})}),j.jsx(Af,{to:"/history",title:"History",children:j.jsx($0,{size:24})})]})]})}const uw=Xe.div`
   max-width: 74rem;
   height: calc(100vh - 10rem);
   margin: 5rem auto;
